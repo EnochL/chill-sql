@@ -10,6 +10,7 @@ type User = {
     user_company?: string
     user_height?: number
 }
+
 type MyTables = {
     user: User
 }
@@ -37,6 +38,7 @@ mysqlClient.tables.user.select(['user_name'])
     )
     .and(e => e.user_height.gte(166))
     .exec() // return Pick<User,'user_name'>[]
+    
 // insert
 mysqlClient.tables.user.insert({
     user_id: 'Enoch',
