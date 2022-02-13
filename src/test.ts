@@ -1,8 +1,5 @@
-# chill-sql
-simple sql builder for mysql in typescript
+import { createMysqlClient } from './index'
 
-# Usage
-```
 type User = {
     user_id: string
     user_name: string
@@ -21,7 +18,7 @@ const mysqlClient = createMysqlClient<MyTables>({
     password: `whosyourdaddy`,
     database: `test`,
     charset: 'utf8mb4_unicode_ci',
-    timeout: 7777,
+    timeout: 8000,
 })
 
 // query
@@ -73,4 +70,6 @@ mysqlClient.runTransaction(async client => {
         user_height: 166
     })
 })
-```
+
+
+

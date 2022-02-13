@@ -1,9 +1,16 @@
 {
   "name": "chill-sql",
   "version": "1.0.0",
-  "description": "simple sql builder by typescript",
+  "description": "simple sql builder for mysql in typescript",
   "main": "index.js",
   "repository": "https://github.com/EnochL/chill-sql.git",
   "author": "Enoch",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@types/mysql": "^2.15.21",
+    "mysql": "^2.18.1"
+  }
 }
