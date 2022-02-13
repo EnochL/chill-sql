@@ -27,7 +27,7 @@ const mysqlClient = createMysqlClient<MyTables>({
 
 // query
 mysqlClient.tables.user.select('*')
-    .where(e => e.user_company.eq(`doge`))
+    .where(e => e.user_company.eq('doge'))
     .and(e => e.user_height.gte(166))
     .exec() // return User[]
 
