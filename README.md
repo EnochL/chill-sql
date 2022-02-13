@@ -2,7 +2,7 @@
 simple sql builder for mysql in typescript
 
 # Usage
-```
+```typescript
 type User = {
     user_id: string
     user_name: string
