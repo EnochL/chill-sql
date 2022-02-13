@@ -1,0 +1,9 @@
+{
+  "name": "chill-sql",
+  "version": "1.0.0",
+  "description": "simple sql builder by typescript",
+  "main": "index.js",
+  "repository": "https://github.com/EnochL/chill-sql.git",
+  "author": "Enoch",
+  "license": "MIT"
+}
