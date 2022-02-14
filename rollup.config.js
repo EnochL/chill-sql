@@ -24,7 +24,7 @@ function readJsonFileSync(path) {
 function createRollupConfig(externalModules) {
     const external_modules = externalModules || []
     if (!Array.isArray(external_modules))
-        throw new Error(`rollup.external_modules is NOT Array`)
+        throw new Error(`rollup.external_modules is not an array`)
 
     const pkg = readJsonFileSync('./package.json')
 
@@ -32,7 +32,7 @@ function createRollupConfig(externalModules) {
         ...Object.keys(pkg.dependencies || {}),
         ...external_modules,
     ]
-    
+
     return [
         {
             input: './src/index.ts',
