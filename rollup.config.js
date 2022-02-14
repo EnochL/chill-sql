@@ -1,7 +1,6 @@
 const typescript = require('rollup-plugin-typescript2')
 const dts = require("rollup-plugin-dts").default
 const fs = require('fs')
-const typesDir = './types'
 const tsconfigOverride = {
     compilerOptions: {
         module: "ESNext",
