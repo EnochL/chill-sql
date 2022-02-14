@@ -1,4 +1,3 @@
-import { ArrayElementOf, AsString, MaybeArray, Table } from './types'
 import {
     ConditionExpr,
     ConditionExprBuilderProvider,
@@ -7,8 +6,8 @@ import {
     putNewParam
 } from './expr'
 import { EscapeFunctions, MysqlError, Pool, QueryFunction } from 'mysql'
-import { Int } from '../types'
-import { withoutUndefined } from '../utils'
+import { ArrayElementOf, AsString, Int, MaybeArray, Table } from './types'
+import { withoutUndefined } from './utils'
 
 export type MysqlModifyResult = {
     'fieldCount': number,

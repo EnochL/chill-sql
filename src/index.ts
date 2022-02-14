@@ -1,1 +1,1 @@
-export { createMysqlClient } from './db/client'
+export { createMysqlClient } from './client'
