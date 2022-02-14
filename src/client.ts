@@ -59,11 +59,10 @@ function releaseConnQuietly(conn: PoolConnection) {
 export type MysqlClientWithTransaction<TABLES_DEF extends Tables> = Omit<MysqlClient<TABLES_DEF>, 'runTransaction'>
 
 export class MysqlClient<TABLES_DEF extends Tables> {
-    constructor(private pool: Pool | PoolConnection) {
-    }
+    public tables: { [K in keyof TABLES_DEF]: CommandBooter<TABLES_DEF[K]> }
 
-    get tables() {
-        return new Proxy(this.pool, {
+    constructor(private pool: Pool | PoolConnection) {
+        this.tables = new Proxy(pool, {
             get(target: Pool, p: PropertyKey): any {
                 return new CommandBooter(p.toString(), target)
             }
