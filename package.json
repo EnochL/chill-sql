@@ -4,7 +4,7 @@
   "description": "simple sql builder for mysql in typescript",
   "main": "index.js",
   "repository": "https://github.com/EnochL/chill-sql.git",
-  "author": "Enoch",
+  "author": "Enoch <enochl@icloud.com>",
   "license": "MIT",
   "devDependencies": {
     "typescript": "^4.5.5"
