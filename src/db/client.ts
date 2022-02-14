@@ -1,13 +1,7 @@
-import mysql, { EscapeFunctions, Pool, PoolConfig, PoolConnection, QueryFunction } from 'mysql'
+import mysql, { Pool, PoolConfig, PoolConnection } from 'mysql'
 import { Tables } from './types'
 import '../array-extension'
 import { CommandBooter, DeleteCommand, execSql, InsertCommand, QueryCommand, UpdateCommand } from './command'
-
-// type NonObjKeysOf<T extends object> = {
-//     [K in keyof T]: T[K] extends object ? never : K
-// }[keyof T]
-
-
 
 async function getConnFromPool(pool: Pool): Promise<PoolConnection> {
     return new Promise((resolve, reject) => {
