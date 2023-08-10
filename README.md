@@ -1,8 +1,8 @@
 # chill-sql
 simple sql builder for mysql in typescript
-type checking helps you build sql better and easier
+type checking helps you build sql easier and more efficiently, especially in Jetbrain IDE.
 common sql syntax are supported, include select, insert, update, delete, where, orderBy, limit, join, having, sum, avg, count, max, min etc.
-hope you guys have a gorgeous coding experience.
+hope you guys enjoy the gorgeous coding experience.
 
 # Usage
 ```typescript
