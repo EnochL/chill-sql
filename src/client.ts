@@ -109,14 +109,14 @@ function releaseConnQuietly(conn: PoolConnection) {
     try {
         conn.release()
     } catch (e) {
-        console.log(`release mysql connection error`, e)
+        console.error(`release mysql connection error`, e)
     }
 }
 
 export function createMysqlClient<TABLES_DEF extends Tables>(config: PoolConfig | string): MysqlClient<TABLES_DEF> {
     const pool = mysql.createPool(config)
     pool.config.connectionConfig.queryFormat = function (query, values) {
-        console.log(`query:`+query)
+        // console.log(`query:`+query)
         if (!values) return query
         const finalSql = query.replace(
             /\:(\w+)/g,
@@ -127,7 +127,7 @@ export function createMysqlClient<TABLES_DEF extends Tables>(config: PoolConfig 
                 return txt
             }
         )
-        console.log(finalSql)
+        // console.log(finalSql)
         return finalSql
     }
     return new MysqlClient<TABLES_DEF>(pool)
