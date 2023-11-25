@@ -1,6 +1,6 @@
 {
     "name": "chill-sql",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "simple sql builder for mysql in typescript",
     "main": "./lib/index.cjs.js",
     "module": "./lib/index.esm.js",
