@@ -12,6 +12,11 @@
     "author": "Enoch <enochl@icloud.com>",
     "license": "MIT",
     "keywords": [
+        "typesql",
+        "type-sql",
+        "type sql",
+        "type-safe sql",
+        "sql",
         "typescript",
         "mysql"
     ],
